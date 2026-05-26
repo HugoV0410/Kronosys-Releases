@@ -1,5 +1,5 @@
 ﻿{
-  "version": "0.1.0",
-  "installer_url": "https://github.com/HugoV0410/Kronosys-Releases/releases/download/v0.1.0/Kronosys-Setup-0.1.0.exe",
-  "notes": "Primera versión instalable de Kronosys."
+  "version": "0.1.1",
+  "installer_url": "https://github.com/HugoV0410/Kronosys-Releases/releases/download/v0.1.1/Kronosys-Setup-0.1.1.exe",
+  "notes": "Agrega aviso de actualizaciones y mejoras de empaquetado."
 }
