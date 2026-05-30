@@ -1,5 +1,5 @@
-﻿{
-  "version": "0.1.1",
-  "installer_url": "https://hugov0410.github.io/Kronosys-Releases/downloads/Kronosys-Setup-0.1.1.exe",
-  "notes": "Agrega aviso de actualizaciones y mejoras de empaquetado."
+{
+  "version": "0.1.2",
+  "installer_url": "https://hugov0410.github.io/Kronosys-Releases/",
+  "notes": "Nueva versión disponible. Incluye mejoras de interfaz, correcciones generales y ajustes internos."
 }
