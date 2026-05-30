@@ -3,63 +3,517 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Descargar Kronosys</title>
+  <title>Kronosys | Descarga oficial</title>
+  <meta name="description" content="Descarga oficial de Kronosys para Windows. Sistema de asistencia y nómina para obras.">
+
   <style>
+    :root {
+      --bg: #0F1923;
+      --bg2: #131E29;
+      --card: rgba(28, 42, 56, .86);
+      --card2: rgba(22, 32, 46, .92);
+      --border: #2E4057;
+      --accent: #00C2FF;
+      --accent2: #4ADE80;
+      --text: #E8EDF2;
+      --muted: #8BA0B4;
+      --dark: #071018;
+      --warning: #F59E0B;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
     body {
       margin: 0;
-      font-family: Segoe UI, Arial, sans-serif;
-      background: #0F1923;
-      color: #E8EDF2;
-      display: grid;
+      font-family: "Segoe UI", Arial, sans-serif;
+      background:
+        radial-gradient(circle at top left, rgba(0, 194, 255, .18), transparent 34%),
+        radial-gradient(circle at bottom right, rgba(74, 222, 128, .10), transparent 30%),
+        linear-gradient(135deg, var(--bg), var(--bg2));
+      color: var(--text);
       min-height: 100vh;
+    }
+
+    .page {
+      width: min(1120px, calc(100% - 36px));
+      margin: 0 auto;
+      padding: 32px 0 48px;
+    }
+
+    header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 18px;
+      margin-bottom: 52px;
+    }
+
+    .brand {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      font-weight: 800;
+      letter-spacing: .3px;
+    }
+
+    .logo {
+      width: 42px;
+      height: 42px;
+      border-radius: 13px;
+      background: linear-gradient(135deg, var(--accent), #0077ff);
+      display: grid;
       place-items: center;
+      color: var(--dark);
+      font-weight: 900;
+      box-shadow: 0 14px 32px rgba(0, 194, 255, .24);
     }
-    .card {
-      width: min(560px, calc(100% - 40px));
-      background: #1C2A38;
-      border: 1px solid #2E4057;
-      border-radius: 18px;
-      padding: 36px;
-      text-align: center;
-      box-shadow: 0 18px 45px rgba(0,0,0,.28);
-    }
-    h1 {
-      margin: 0 0 10px;
-      font-size: 32px;
-    }
-    p {
-      color: #8BA0B4;
-      line-height: 1.5;
-      margin: 10px 0 24px;
-    }
-    a.button {
-      display: inline-block;
-      background: #00C2FF;
-      color: #0F1923;
-      text-decoration: none;
-      font-weight: 700;
-      padding: 14px 24px;
-      border-radius: 12px;
-    }
-    .small {
-      margin-top: 20px;
+
+    .version-pill {
+      border: 1px solid var(--border);
+      background: rgba(255, 255, 255, .04);
+      color: var(--muted);
+      border-radius: 999px;
+      padding: 8px 12px;
       font-size: 13px;
-      color: #8BA0B4;
+    }
+
+    .hero {
+      display: grid;
+      grid-template-columns: 1.15fr .85fr;
+      gap: 28px;
+      align-items: center;
+    }
+
+    .hero-card {
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: 28px;
+      padding: 42px;
+      box-shadow: 0 26px 72px rgba(0, 0, 0, .32);
+      backdrop-filter: blur(12px);
+    }
+
+    .eyebrow {
+      color: var(--accent);
+      font-weight: 800;
+      font-size: 13px;
+      letter-spacing: .14em;
+      text-transform: uppercase;
+      margin-bottom: 14px;
+    }
+
+    h1 {
+      margin: 0;
+      font-size: clamp(38px, 7vw, 68px);
+      line-height: .95;
+      letter-spacing: -2.5px;
+    }
+
+    .subtitle {
+      margin: 22px 0 30px;
+      color: var(--muted);
+      font-size: 18px;
+      line-height: 1.6;
+      max-width: 650px;
+    }
+
+    .actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 14px;
+      align-items: center;
+    }
+
+    .button {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+      min-height: 52px;
+      padding: 0 22px;
+      border-radius: 14px;
+      text-decoration: none;
+      font-weight: 800;
+      transition: transform .16s ease, box-shadow .16s ease, border-color .16s ease;
+    }
+
+    .button:hover {
+      transform: translateY(-2px);
+    }
+
+    .button.primary {
+      background: var(--accent);
+      color: var(--dark);
+      box-shadow: 0 18px 42px rgba(0, 194, 255, .25);
+    }
+
+    .button.secondary {
+      color: var(--text);
+      border: 1px solid var(--border);
+      background: rgba(255, 255, 255, .04);
+    }
+
+    .meta {
+      margin-top: 18px;
+      color: var(--muted);
+      font-size: 13px;
+    }
+
+    .preview {
+      position: relative;
+      background: var(--card2);
+      border: 1px solid var(--border);
+      border-radius: 28px;
+      padding: 22px;
+      box-shadow: 0 26px 72px rgba(0, 0, 0, .28);
+      overflow: hidden;
+    }
+
+    .preview::before {
+      content: "";
+      position: absolute;
+      inset: -80px -80px auto auto;
+      width: 190px;
+      height: 190px;
+      border-radius: 999px;
+      background: rgba(0, 194, 255, .16);
+      filter: blur(8px);
+    }
+
+    .window {
+      position: relative;
+      border: 1px solid var(--border);
+      background: #0B141E;
+      border-radius: 18px;
+      overflow: hidden;
+    }
+
+    .window-bar {
+      display: flex;
+      gap: 7px;
+      padding: 13px 14px;
+      border-bottom: 1px solid var(--border);
+      background: rgba(255, 255, 255, .03);
+    }
+
+    .dot {
+      width: 10px;
+      height: 10px;
+      border-radius: 50%;
+      background: #EF4444;
+    }
+
+    .dot:nth-child(2) {
+      background: #F59E0B;
+    }
+
+    .dot:nth-child(3) {
+      background: #22C55E;
+    }
+
+    .screen {
+      padding: 18px;
+    }
+
+    .side-row {
+      display: grid;
+      grid-template-columns: 86px 1fr;
+      gap: 12px;
+      margin-bottom: 12px;
+    }
+
+    .sidebar-mini,
+    .content-mini {
+      border-radius: 12px;
+      background: rgba(255, 255, 255, .05);
+      min-height: 240px;
+      padding: 12px;
+    }
+
+    .nav-item,
+    .line {
+      height: 12px;
+      border-radius: 999px;
+      background: rgba(139, 160, 180, .25);
+      margin-bottom: 11px;
+    }
+
+    .nav-item.active {
+      background: rgba(0, 194, 255, .78);
+    }
+
+    .line.wide {
+      width: 90%;
+    }
+
+    .line.mid {
+      width: 66%;
+    }
+
+    .line.short {
+      width: 38%;
+    }
+
+    .table {
+      margin-top: 18px;
+      border: 1px solid rgba(46, 64, 87, .75);
+      border-radius: 14px;
+      overflow: hidden;
+    }
+
+    .tr {
+      display: grid;
+      grid-template-columns: 1.2fr .7fr .7fr;
+    }
+
+    .td {
+      height: 34px;
+      border-bottom: 1px solid rgba(46, 64, 87, .55);
+      border-right: 1px solid rgba(46, 64, 87, .55);
+      background: rgba(255, 255, 255, .035);
+    }
+
+    .tr:last-child .td {
+      border-bottom: 0;
+    }
+
+    .td:last-child {
+      border-right: 0;
+    }
+
+    .features {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 16px;
+      margin-top: 28px;
+    }
+
+    .feature {
+      background: rgba(28, 42, 56, .72);
+      border: 1px solid var(--border);
+      border-radius: 20px;
+      padding: 22px;
+    }
+
+    .feature .icon {
+      font-size: 26px;
+      margin-bottom: 10px;
+    }
+
+    .feature h3 {
+      margin: 0 0 8px;
+      font-size: 17px;
+    }
+
+    .feature p {
+      margin: 0;
+      color: var(--muted);
+      line-height: 1.5;
+      font-size: 14px;
+    }
+
+    .install {
+      margin-top: 28px;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 16px;
+    }
+
+    .panel {
+      background: rgba(28, 42, 56, .72);
+      border: 1px solid var(--border);
+      border-radius: 20px;
+      padding: 24px;
+    }
+
+    .panel h2 {
+      margin: 0 0 14px;
+      font-size: 20px;
+    }
+
+    ol {
+      margin: 0;
+      padding-left: 21px;
+      color: var(--muted);
+      line-height: 1.8;
+    }
+
+    .notice {
+      border-color: rgba(245, 158, 11, .35);
+      background: rgba(245, 158, 11, .08);
+    }
+
+    .notice strong {
+      color: #FBBF24;
+    }
+
+    footer {
+      margin-top: 32px;
+      color: var(--muted);
+      text-align: center;
+      font-size: 13px;
+    }
+
+    @media (max-width: 860px) {
+      header {
+        margin-bottom: 28px;
+      }
+
+      .hero,
+      .install,
+      .features {
+        grid-template-columns: 1fr;
+      }
+
+      .hero-card {
+        padding: 30px;
+      }
+
+      .preview {
+        order: -1;
+      }
     }
   </style>
 </head>
+
 <body>
-  <main class="card">
-    <h1>Kronosys</h1>
-    <p>Instalador oficial para Windows.</p>
+  <div class="page">
+    <header>
+      <div class="brand">
+        <div class="logo">K</div>
+        <div>
+          <div>Kronosys</div>
+          <small style="color: var(--muted); font-weight: 500;">Asistencia y nómina</small>
+        </div>
+      </div>
 
-    <a class="button" href="downloads/Kronosys-Setup-0.1.1.exe">
-      Descargar Kronosys 0.1.1
-    </a>
+      <div class="version-pill">Versión actual: 0.1.2</div>
+    </header>
 
-    <div class="small">
-      Si Windows muestra una advertencia, elige conservar/ejecutar el archivo.
-    </div>
-  </main>
+    <section class="hero">
+      <div class="hero-card">
+        <div class="eyebrow">Descarga oficial para Windows</div>
+        <h1>Gestiona asistencia y nómina con menos fricción.</h1>
+
+        <p class="subtitle">
+          Kronosys procesa archivos biométricos, genera horarios, prepara la nómina
+          y exporta resultados a Excel desde una aplicación local para Windows.
+        </p>
+
+        <div class="actions">
+          <a class="button primary"
+             href="https://github.com/HugoV0410/Kronosys-Releases/releases/download/v0.1.2/Kronosys-Setup-0.1.2.exe">
+            ⬇ Descargar Kronosys 0.1.2
+          </a>
+
+          <a class="button secondary"
+             href="https://github.com/HugoV0410/Kronosys-Releases/releases">
+            Ver versiones
+          </a>
+        </div>
+
+        <div class="meta">
+          Instalador para Windows · Archivo .exe · Última versión publicada: v0.1.2
+        </div>
+      </div>
+
+      <div class="preview" aria-hidden="true">
+        <div class="window">
+          <div class="window-bar">
+            <span class="dot"></span>
+            <span class="dot"></span>
+            <span class="dot"></span>
+          </div>
+
+          <div class="screen">
+            <div class="side-row">
+              <div class="sidebar-mini">
+                <div class="nav-item active"></div>
+                <div class="nav-item"></div>
+                <div class="nav-item"></div>
+                <div class="nav-item"></div>
+              </div>
+
+              <div class="content-mini">
+                <div class="line wide"></div>
+                <div class="line mid"></div>
+                <div class="line short"></div>
+
+                <div class="table">
+                  <div class="tr">
+                    <div class="td"></div>
+                    <div class="td"></div>
+                    <div class="td"></div>
+                  </div>
+                  <div class="tr">
+                    <div class="td"></div>
+                    <div class="td"></div>
+                    <div class="td"></div>
+                  </div>
+                  <div class="tr">
+                    <div class="td"></div>
+                    <div class="td"></div>
+                    <div class="td"></div>
+                  </div>
+                  <div class="tr">
+                    <div class="td"></div>
+                    <div class="td"></div>
+                    <div class="td"></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="features">
+      <article class="feature">
+        <div class="icon">📂</div>
+        <h3>Carga de archivos</h3>
+        <p>Importa archivos biométricos, listas de personal y plantillas Excel.</p>
+      </article>
+
+      <article class="feature">
+        <div class="icon">🕒</div>
+        <h3>Horarios y turnos</h3>
+        <p>Procesa asistencia por turno diurno, nocturno y horarios especiales.</p>
+      </article>
+
+      <article class="feature">
+        <div class="icon">💰</div>
+        <h3>Nómina en Excel</h3>
+        <p>Previsualiza datos y exporta la nómina usando tu plantilla operativa.</p>
+      </article>
+    </section>
+
+    <section class="install">
+      <div class="panel">
+        <h2>Instalación</h2>
+        <ol>
+          <li>Descarga el instalador desde el botón principal.</li>
+          <li>Ejecuta <strong>Kronosys-Setup-0.1.2.exe</strong>.</li>
+          <li>Sigue el asistente de instalación.</li>
+          <li>Abre Kronosys desde el menú inicio o acceso directo.</li>
+        </ol>
+      </div>
+
+      <div class="panel notice">
+        <h2>Advertencia de Windows</h2>
+        <p style="margin: 0; color: var(--muted); line-height: 1.7;">
+          <strong>Es normal que Windows muestre un aviso</strong> porque el instalador
+          aún no está firmado digitalmente. Elige conservar o ejecutar el archivo
+          si lo descargaste desde esta página oficial.
+        </p>
+      </div>
+    </section>
+
+    <footer>
+      Kronosys · Distribución oficial mediante GitHub Releases
+    </footer>
+  </div>
 </body>
 </html>
