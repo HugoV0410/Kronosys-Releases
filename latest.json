@@ -1,5 +1,6 @@
 {
   "version": "0.1.5",
-  "installer_url": "https://hugov0410.github.io/Kronosys-Releases/",
+  "installer_url": "https://github.com/HugoV0410/Kronosys-Releases/releases/download/v0.1.5/Kronosys-Setup-0.1.5.exe",
+  "page_url": "https://hugov0410.github.io/Kronosys-Releases/",
   "notes": "Nueva actualizacion disponible. Incluye mejoras visuales, correcciones generales y ajustes al sistema de actualizacion."
 }
