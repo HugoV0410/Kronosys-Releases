@@ -1,5 +1,1 @@
-{
-  "version": "1.1.0",
-  "installer_url": "https://github.com/HugoV0410/Kronosys-Releases/releases/download/v1.1.0/Kronosys-Setup-1.1.0.exe",
-  "notes": "Kronosys 1.1.0: agrega sincronización compartida de usuarios mediante Google Sheets y Apps Script, con pull al iniciar/login y push al crear, editar, activar, desactivar o eliminar usuarios."
-}
+{"version":"1.1.1","installer_url":"https://github.com/HugoV0410/Kronosys-Releases/releases/download/v1.1.1/Kronosys-Setup-1.1.1.exe","notes":"Kronosys 1.1.1: conserva activo el archivo recien seleccionado y muestra errores reales al publicar usuarios en la lista central."}
