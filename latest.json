@@ -1,5 +1,5 @@
 {
-    "version":  "2.0.0",
-    "installer_url":  "https://github.com/HugoV0410/Kronosys-Releases/releases/download/v2.0.0/Kronosys-Setup-2.0.0.exe",
-    "notes":  "Kronosys 2.0.0: nuevo Inicio, rediseno visual, carga tradicional o personalizada de archivos, previews automaticos y mejoras completas en asistencias, retardos, bajas, nomina y administracion."
+  "version": "3.0.0",
+  "installer_url": "https://github.com/HugoV0410/Kronosys-Releases/releases/download/v3.0.0/Kronosys-Setup-3.0.0.exe",
+  "notes": "Kronosys 3.0.0: acceso con base central y codigo por equipo, un solo periodo de fechas para todas las secciones, bajas y retardos siempre calculados, hoja Resumen automatica y exportacion mucho mas rapida. Al actualizar se cierra la sesion: pide tu usuario nuevo."
 }
