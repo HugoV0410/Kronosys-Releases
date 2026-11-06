@@ -1,5 +1,6 @@
 {
-  "version": "3.0.1",
-  "installer_url": "https://github.com/HugoV0410/Kronosys-Releases/releases/download/v3.0.1/Kronosys-Setup-3.0.1.exe",
-  "notes": "Kronosys 3.0.1: Retardos vuelve a salir completo. Ya no se recorta con unas fechas viejas guardadas en cada equipo, sino con el periodo de Parametros, igual que Asistencias y Bajas."
+  "version": "3.0.2",
+  "installer_url": "https://github.com/HugoV0410/Kronosys-Releases/releases/download/v3.0.2/Kronosys-Setup-3.0.2.exe",
+  "sha256": "c355c1352cbbee6af0d1a6486bcb3fd606c90bdad8aebc93bbe5fb7fa67d2105",
+  "notes": "Kronosys 3.0.2: un dia que el archivo del checador no trae ya no se marca como falta, se avisa. La lista de nocturnos ya no se pierde por un renglon vacio. Los errores se explican en grande y en lenguaje simple, con boton para mandarlos a soporte. Al cambiar de configuracion se quedan los archivos cargados, y la plantilla se elige en un solo paso. La actualizacion comprueba que el instalador sea el publicado."
 }
