@@ -1,6 +1,6 @@
 {
-  "version": "3.0.2",
-  "installer_url": "https://github.com/HugoV0410/Kronosys-Releases/releases/download/v3.0.2/Kronosys-Setup-3.0.2.exe",
-  "sha256": "c355c1352cbbee6af0d1a6486bcb3fd606c90bdad8aebc93bbe5fb7fa67d2105",
-  "notes": "Kronosys 3.0.2: un dia que el archivo del checador no trae ya no se marca como falta, se avisa. La lista de nocturnos ya no se pierde por un renglon vacio. Los errores se explican en grande y en lenguaje simple, con boton para mandarlos a soporte. Al cambiar de configuracion se quedan los archivos cargados, y la plantilla se elige en un solo paso. La actualizacion comprueba que el instalador sea el publicado."
+  "version": "3.0.3",
+  "installer_url": "https://github.com/HugoV0410/Kronosys-Releases/releases/download/v3.0.3/Kronosys-Setup-3.0.3.exe",
+  "sha256": "562a201656665414267a2f57e552397a445b3e76d347a395a177a0bad4d3146d",
+  "notes": "Kronosys 3.0.3: la nomina ya no pierde la semana de alguien que se detecto como baja. Antes, si se pasaba primero por Asistencias, Retardos o Bajas, esa persona se quedaba sin sus dias y horas extra. Nueva opcion en Parametros: domingo proporcional a los dias trabajados de lunes a sabado."
 }
